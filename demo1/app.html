@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <style>
+      * {
+          box-sizing: border-box;
+      }
+
+      html, body, .fullsize {
+          height: 100%;
+          width: 100%;    
+      }
+
+      body {
+          margin: 0;
+          /* border: 1px solid gray; */
+      }
+       
+      .overflow {
+          overflow: auto;
+      }
+
+      .console {
+          background-color: #242424;
+          width: 100%;
+          height: 100%;
+      }
+
+      .error {
+          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADESURBVChTY4CB7ZI8tmfU5E6e01b+DMIgNkgMKg0BR9Vkux6YWPx/bemIgkFiIDmwogOaqrYPzazAEm8DwuGKYGyQHEgNw0VT05Mwib9v3v7/kJEHxiA2TDFIDcNNU4vPMFPACj58/P/v40cwGyYOUsNwy8IZRSFIEUgxskKQGoZrzp4ErQapYbgYHG371M4dLACTQGaD5EBqwD6/FpzQ9dTBE64IhkFiIDmwIhi4mlJqey8o4eR9r8jPIAxig8QgsgwMAFZz1YtGPXgjAAAAAElFTkSuQmCC);
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+      }
+
+      .icon {
+          width: 10%;
+          outline: none;
+          border: none;
+          vertical-align: top;
+          height: 25px;
+          font-family: apple color emoji,segoe ui emoji,noto color emoji,android emoji,emojisymbols,emojione mozilla,twemoji mozilla,segoe ui symbol;
+      }
+
+      .topbar input{
+          width: 90%;
+          height: 25px;
+          border: none;
+      } 
+
+    </style>
+  </head>
+  <body>
+    <div id="projectView" class="fullsize"></div>
+    <!-- <canvas id="" className="fullsize"></canvas> -->
+    <!-- modules are run later than non-mdules  -->
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

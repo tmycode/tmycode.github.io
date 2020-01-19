@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<link rel="canonical" href="/website/index.html">
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+             .register('./sw.js');
+  }
+  location.href = "/website/index.html";
+</script>
