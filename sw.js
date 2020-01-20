@@ -13,9 +13,10 @@ self.addEventListener('fetch', function(e) {
         let h = `https://tmcodesdk.github.io${path}/index.js`;
         return fetch(new Request(h))
           .then(resp => {
-              // let copy = resp.clone();
-              // caches.put(e.request.url, copy);
-              return resp;
+            caches.open('v1').then(function(cache) {
+              cache.put(e.request.url, resp);
+            });
+            return resp.clone;
           });
       }
     });
