@@ -3,7 +3,9 @@ self.addEventListener('fetch', function(e) {
   if(url.host.startsWith('localhost')) {
     return; // do default
   }
-  else if(url.pathname.includes("/lib/")) {
+  else if(url.pathname.includes("/lib/")
+    &&!url.pathname.includes("/lib/doc/")
+    &&!url.pathname.endsWith(".html")) {
     let promised = caches.match(e.request).then(response =>{
       if(response) {
         return response;   
