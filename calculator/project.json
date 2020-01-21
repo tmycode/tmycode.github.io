@@ -1,5 +1,6 @@
 {
     "type": "console",
     "name": "consoleName",
+    "learning": "lecture1.htmx",
     "tutorial": "https://www.youtube.com/embed/uqS0KnmXXiY"
 }

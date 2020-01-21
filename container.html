@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html, body, .fullsize{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+                 .register('./sw.js');
+      }
+      else {
+        prompt("Browser not compatiable.");
+      }
+      let path = location.search.replace("?app=", "");
+      var iframe = document.createElement('iframe');
+      iframe.className = "fullsize";
+      iframe.setAttribute("frameBorder", 0)
+      iframe.src = path + (path.endsWith(".html")?'': '/app.html');
+      document.body.appendChild(iframe);
+    </script>
+  </body>
+</html>
